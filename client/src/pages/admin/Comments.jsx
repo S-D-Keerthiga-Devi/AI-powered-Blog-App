@@ -34,7 +34,12 @@ const Comments = () => {
             <th scope='col' className='px-6 py-3 '>ACTION</th>
           </tr>
         </thead>
-        
+        <tbody>
+          {comments.filter((comment)=>{
+            if(filter === "Approved") return comment.isApproved === true;
+            return comment.isApproved === false;
+          })}
+        </tbody>
       </table>
       </div>
     </div>
