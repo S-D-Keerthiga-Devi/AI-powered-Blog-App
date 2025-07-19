@@ -1,9 +1,11 @@
 import express from 'express'
 import dotenv from 'dotenv'
-dotenv.config()
+dotenv.config({ path: './.env' });
+
 import cors from 'cors'
 import connectDB from './configs/db.js';
 import adminRouter from './routes/adminRoutes.js';
+import blogRouter from './routes/blogRoutes.js';
 
 const app = express();
 
@@ -16,7 +18,7 @@ app.use(express.json())
 // Routes
 app.get('/', (req, res)=> res.send("API is working"))
 app.use('/api/admin', adminRouter)
-
+app.use('/api/blog', blogRouter)
 
 const PORT = process.env.PORT || 3000;
 
