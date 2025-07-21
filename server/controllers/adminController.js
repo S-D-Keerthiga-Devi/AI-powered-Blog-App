@@ -52,7 +52,7 @@ export const getDashboard = async (req, res) =>{
         const dashboardData = {
             blogs, comments, drafts, recentBlogs
         }
-        res.json({success: true, comments})
+        res.json({success: true, dashboardData})
     }catch(error){
         res.json({success: false, message: error.message})
     }

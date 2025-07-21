@@ -54,7 +54,7 @@ const Blog = () => {
         toast.error(error.message);
       }
    }
-
+ 
 useEffect(()=>{
   fetchBlogData()
   fetchComments()
