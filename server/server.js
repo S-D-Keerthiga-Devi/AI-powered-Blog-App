@@ -15,7 +15,7 @@ await connectDB()
 const allowedOrigins = [
   'http://localhost:5173',
   'https://legendary-spoon-xjp6j54rg5qhprrq-5173.app.github.dev',
-  'https://quick-blog-server-seven-psi.vercel.app/'
+  'https://keerthiga-quick-blog-app.vercel.app'
 ];
 
 app.use(cors({
